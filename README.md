@@ -19,4 +19,11 @@
 1	a	1	W1
 2	a	2	W2
 
-![]()
+![](https://github.com/Sailboats/HybirsTest/blob/master/testcase1.png)
+
+![](https://github.com/Sailboats/HybirsTest/blob/master/testcase2.png)
+
+![](https://github.com/Sailboats/HybirsTest/blob/master/testcase3.png)
+
+![](https://github.com/Sailboats/HybirsTest/blob/master/testcase4.png)
+
