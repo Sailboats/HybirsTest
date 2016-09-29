@@ -19,11 +19,11 @@
 1	a	1	W1
 2	a	2	W2
 
+解答思路：先按照商品数量降序、仓库距离升序、仓库优先级降序排序的顺序来将仓库排序，再逐个寻源
+
 ![](https://github.com/Sailboats/HybirsTest/blob/master/testcase1.png)
 
 ![](https://github.com/Sailboats/HybirsTest/blob/master/testcase2.png)
 
-![](https://github.com/Sailboats/HybirsTest/blob/master/testcase3.png)
 
-![](https://github.com/Sailboats/HybirsTest/blob/master/testcase4.png)
 
