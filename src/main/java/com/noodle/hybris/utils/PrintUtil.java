@@ -13,7 +13,7 @@ public class PrintUtil {
 
 	private static int num = 1;
 
-	public static void resetNum() {
+	private static void resetNum() {
 		num = 1;
 	}
 
@@ -26,7 +26,7 @@ public class PrintUtil {
 	}
 
 	public static void PrintHead() {
-
+		resetNum();
 		System.out.println("发货单号	商品名称	数量		出货仓库");
 	}
 }
