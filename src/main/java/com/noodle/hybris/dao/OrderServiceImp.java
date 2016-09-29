@@ -22,12 +22,12 @@ public class OrderServiceImp implements OrderService {
 	 */
 	public void getGoods(Order order) {
 
-		if (findSourceByOneW(order)) {
-			// 单独一个仓库就可以满足出货要求
-		} else {
-			// 需要多个仓库才能满足出货要求
-			findSourceByManyW(order);
-		}
+		// if (findSourceByOneW(order)) {
+		// // 单独一个仓库就可以满足出货要求
+		// } else {
+		// 需要多个仓库才能满足出货要求
+		findSourceByManyW(order);
+		// }
 
 	}
 
@@ -40,6 +40,7 @@ public class OrderServiceImp implements OrderService {
 		// 2.其次判断单个仓库不能独自满足出货要求的情况
 		List<BaseW> ws = initW();
 
+		// 先按照商品数量降序、仓库距离升序、仓库优先级降序排序
 		ws.sort(new OrderComparator(order));
 
 		int total_count = 0;
@@ -49,6 +50,7 @@ public class OrderServiceImp implements OrderService {
 
 			if (total_count >= order.getCount()) {
 				ws.remove(true_index);
+				true_index--;
 			} else {
 				total_count += ws.get(true_index).getCountByType(
 						order.getType());
@@ -64,7 +66,7 @@ public class OrderServiceImp implements OrderService {
 	 * 在单个仓库中寻源
 	 * 
 	 * @param order
-	 */
+	 *//*
 	private boolean findSourceByOneW(Order order) {
 		List<BaseW> ws = initW();
 
@@ -87,7 +89,7 @@ public class OrderServiceImp implements OrderService {
 			return true;
 		}
 		return false;
-	}
+	}*/
 
 	/**
 	 * 初始化仓库，按照题目要求建立测试数据
